@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h1>Welcome to the home page</h1>
+
+<div>
+    <p>What do you need ? :</p>
+    <br>
+    <a th:href="@{/list}">Student list</a>
+    <br>
+    <a th:href="@{/form}">Add a student</a>
+    <br>
+    <a th:href="@{/searchname}">Looking for a student with the name</a>
+
+    <br>
+
+
+</div>
+
+
+
+</body>
+</html>

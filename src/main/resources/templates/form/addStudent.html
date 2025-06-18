@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h1>Add a student</h1>
+<a th:href="@{/}">Back to home page</a>
+
+<form method="post" th:action="@{/add}" th:object="${student}">
+    <input th:field="*{id}" type="hidden" />
+
+    <div>
+        <label for="name">Name of the student :</label>
+        <input type="text" th:name="name" id="name"/>
+    </div>
+    <br>
+    <div>
+        <label for="surname">Surname of the student :</label>
+        <input type="text" th:name="surname" id="surname"/>
+    </div>
+    <br>
+    <div>
+        <label for="age">Student's age :</label>
+        <input type="number" th:name="age" id="age"/>
+    </div>
+    <br>
+    <div>
+        <label for="email">Student's Email :</label>
+        <input type="text" th:name="email" id="email"/>
+    </div>
+    <br>
+
+    <button> Confirm </button>
+
+</body>
+</html>
