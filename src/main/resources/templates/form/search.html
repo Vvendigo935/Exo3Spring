@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Searching</title>
+    <link th:href="@{/css/style.css}" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+<h1>Search tool</h1>
+<nav>
+    <a th:href="@{/}">Home Page</a>
+</nav>
+
+<form method="get" th:action="@{/searchname}" th:object="${student}">
+    <div>
+        <label for="name">Student's name :</label>
+        <input type="text" th:name="name" id="name"/>
+    </div>
+    <button> Search </button>
+</body>
+<footer><a th:href="@{/list}">Go to list</a></footer>
+
+</html>

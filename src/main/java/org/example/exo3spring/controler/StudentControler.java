@@ -39,10 +39,16 @@ Student student = studentService.getStudentByID(id);
         model.addAttribute("student",student);
         return "detail";
     }
+    @GetMapping("/searching")
+    public String searchStudent(Model model){
+        model.addAttribute("student", new Student());
+        return "form/search";
+    }
 
     @GetMapping("/searchname")
     public String goSearchName(@RequestParam(value = "name",required = false) String name, Model model){
         Student student = studentService.getStudentByName(name);
+
         if (student != null){
             model.addAttribute("student",student);
             return "detail";

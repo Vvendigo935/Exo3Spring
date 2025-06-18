@@ -1,4 +1,42 @@
-*{
-    background-color: gray;
+body {
+    height: 100vh;
     color: white;
+    font-family: Dubai, fantasy;
+    background: linear-gradient(45deg, #0b4671, #1c2746, #553bb7, #200067);
+    background-size: 200% 200%;
+    animation: degradeAnimation 30s ease-in-out infinite;
+}
+
+
+@keyframes degradeAnimation {
+    0% {
+        background-position: 0% 50%;
+        rotation: 0deg;
+    }
+    50% {
+        background-position: 100% 50%;
+        rotation: 90deg;
+    }
+    100% {
+        background-position: 0% 50%;
+        rotation: 0deg;
+    }
+}
+
+footer{
+    background-color: #0b4671;
+    text-align: center;
+    color: white;
+    font-family: Impact, fantasy;
+}
+div{
+    color: white;
+
+}
+*{
+    color: white;
+}
+
+button{
+    color: black;
 }
