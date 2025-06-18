@@ -53,6 +53,7 @@ Student student = studentService.getStudentByID(id);
             model.addAttribute("student",student);
             return "detail";
         }else {
+
             return "redirect:/list";
         }
     }
